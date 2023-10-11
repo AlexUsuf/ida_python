@@ -1,4 +1,4 @@
-from sum import *
+from sum import sum
 
 def test_sum():
     assert sum(1,1,1) == (3)

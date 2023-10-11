@@ -1,7 +1,5 @@
+array_type_values = [int, float]
 def sum(a, b, c):
-    array = [int, float]
-    if(type(a) not in array or type(b) not in array or type(c) not in array):
+    if(type(a) not in array_type_values or type(b) not in array_type_values or type(c) not in array_type_values):
         return "Type error"
-        
     return a + b + c
-
