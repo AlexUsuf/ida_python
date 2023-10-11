@@ -7,7 +7,7 @@ def test_sum():
     assert sum(10,10.5,-0.5) == (20)
 
 def test_type():
-    assert sum('', 1, 3) == "Type error"
+    assert sum('', 9, 3) == "Type error"
     assert sum('', [], 3) == "Type error"
     assert sum('', {}, 3) == "Type error"
 
