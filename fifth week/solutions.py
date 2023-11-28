@@ -75,4 +75,65 @@ if string.count('f') == 1:
 elif string.count('f') > 1:
     result = str(string.find('f')) + ' ' +  str(string.rfind('f'))
     print(result)
-    
+
+# Дана строка. Найдите в этой строке второе вхождение буквы f, и выведите индекс этого вхождения. 
+# Если буква f в данной строке встречается только один раз, выведите число -1, а если не встречается ни разу, выведите число -2.
+
+string = input()
+if string.count('f') == 1:
+    print(-1)
+elif string.count('f') == 0:
+    print(-2)
+else:
+    start = string.find('f') + 1
+    print(string.find('f', start))
+
+# Дана строка, в которой буква h встречается минимум два раза. 
+# Удалите из этой строки первое и последнее вхождение буквы h, а также все символы, находящиеся между ними.
+
+string = input()
+start = string[0:string.find('h')]
+end = string[string.rfind('h') + 1:]
+result = start + end
+print(result)
+
+# Дана строка. Замените в этой строке все цифры 1 на слово one.
+
+string = input()
+result = string.replace('1', 'one')
+print(result)
+
+# Дана строка. Удалите из этой строки все символы @.
+
+string = input()
+result = string.replace('@', '')
+print(result)
+
+# Дана строка. Замените в этой строке все появления буквы h на букву H, кроме первого и последнего вхождения.
+
+string = input()
+count_letter = string.count('h')
+count = 0
+result = ''
+for i in string:
+    if count == 0 and i == 'h':
+        result += 'h'
+        count += 1
+    elif count == count_letter - 1 and i == 'h':
+        result += 'h'
+        count += 1
+    elif i == 'h':
+        result += 'H'
+        count += 1
+    else:
+        result += i
+print(result)
+
+# Дана строка. Удалите из нее все символы, чьи индексы делятся на 3.
+
+string = input()
+result = ''
+for i in range(len(string)):
+    if i % 3 != 0:
+        result += string[i]
+print(result)
